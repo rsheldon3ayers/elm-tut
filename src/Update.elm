@@ -6,5 +6,5 @@ import Models exposing (Model)
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
     case msg of
-        no0p ->
-        ( model, Cmd.none)
+        Msgs.OnFetchPlayers response ->
+        ( {model | players = response }, Cmd.none )
